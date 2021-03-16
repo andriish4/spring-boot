@@ -14,7 +14,8 @@ pipeline{
         
         stage('Build'){
             steps{
-               sh "mvn -B -DskipTests clean install"
+                sh "cd /spring-boot-samples/spring-boot-sample-web-ui/"
+                sh "mvn -B -DskipTests clean install"
             }
          
         }
